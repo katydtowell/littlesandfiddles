@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Littles & Fiddles — Design System</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #F5EFE2;
+    color: #2B241D;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+  .wrap { max-width: 640px; width: 100%; }
+  h1 { font-size: 28px; margin-bottom: 8px; }
+  p.sub { color: #6B5F52; margin-bottom: 32px; font-size: 15px; }
+  ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  li a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #FFFDF8;
+    border: 1px solid #DDD3BE;
+    border-radius: 8px;
+    padding: 18px 20px;
+    text-decoration: none;
+    color: #2B241D;
+    font-weight: 600;
+    font-size: 16px;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+  li a:hover { border-color: #3D9457; transform: translateX(2px); }
+  li a span.arrow { color: #3D9457; font-weight: 400; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Littles &amp; Fiddles</h1>
+    <p class="sub">Design system pages</p>
+    <ul>
+      <li><a href="mood-board.html">Mood Board <span class="arrow">→</span></a></li>
+      <li><a href="style-guide.html">Style Guide <span class="arrow">→</span></a></li>
+      <li><a href="inventory-console.html">Inventory Console <span class="arrow">→</span></a></li>
+      <li><a href="consignor-portal.html">Consignor Portal <span class="arrow">→</span></a></li>
+      <li><a href="storefront.html">Storefront <span class="arrow">→</span></a></li>
+    </ul>
+  </div>
+</body>
+</html>
