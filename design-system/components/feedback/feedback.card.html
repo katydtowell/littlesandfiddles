@@ -1,0 +1,30 @@
+<!-- @dsCard group="Components" viewport="700x260" name="Feedback" subtitle="Badge, Tag, StatusBadge, Toast, Tooltip, EmptyState" -->
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<div id="root" style="padding:20px;background:var(--surface-page);font-family:var(--font-body)"></div>
+<script type="text/babel">
+const { Badge, Tag, StatusBadge, Toast, Tooltip, IconButton, EmptyState } = window.LittlesFiddlesDesignSystem_4b8e28;
+function Demo(){
+  return (<div style={{display:'flex',flexDirection:'column',gap:16}}>
+    <div style={{display:'flex',gap:8,flexWrap:'wrap'}}>
+      <Badge tone="neutral">Neutral</Badge><Badge tone="primary">Primary</Badge><Badge tone="success">In stock</Badge><Badge tone="warning">Low stock</Badge><Badge tone="danger">Sold out</Badge>
+    </div>
+    <div style={{display:'flex',gap:8,flexWrap:'wrap'}}>
+      <Tag onRemove={()=>{}}>Size 4T</Tag><Tag color="var(--mustard-100)" textColor="var(--mustard-700)">Boys</Tag><Tag color="var(--coral-100)" textColor="var(--coral-700)">New arrival</Tag>
+    </div>
+    <div style={{display:'flex',gap:8,flexWrap:'wrap'}}>
+      <StatusBadge status="received" /><StatusBadge status="priced" /><StatusBadge status="floor" /><StatusBadge status="sold" /><StatusBadge status="paid" /><StatusBadge status="returned" />
+    </div>
+    <div style={{display:'flex',gap:20,alignItems:'center'}}>
+      <Toast tone="success">Sold! Your overalls just found a new home.</Toast>
+      <Toast tone="info">Your item is now visible on the floor.</Toast>
+      <Tooltip label="Mark as sold"><IconButton icon="checkmark" label="Mark sold" /></Tooltip>
+    </div>
+    <EmptyState icon="popcorn" iconColor="var(--color-secondary-hover)" title="No items yet" description="Drop off your first bag and we'll take it from here." />
+  </div>);
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>

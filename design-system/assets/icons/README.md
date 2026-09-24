@@ -1,0 +1,7 @@
+**Self-hosted Phosphor "light"-weight icons** (https://phosphoricons.com, MIT licensed) — lightweight single-stroke line icons, simple and geometric rather than cartoony or illustrated. Inline SVG markup in `components/shared/icons.js` (`ICON_PATHS`), no external CDN or network request, rendered by the `Icon` component (`components/media/Icon.jsx`) via `iconSvgMarkup(name, color)`. Color is a literal hex string applied as `currentColor` on the `<svg>` wrapper.
+
+Current registry: tshirt, tag, baby, moneybag, shoppingbag, package, camera, search, checkmark, crossmark, caretdown, plus, user, pencil, bell, plus circus accents (popcorn, balloon, ticket, star, pennant). Add new entries by pulling the icon's path markup from Phosphor's "light" weight and pasting it into `ICON_PATHS` (viewBox 0 0 256 256, matching Phosphor's coordinate system).
+
+Small functional UI glyphs (close ×, warning !, info i, arrow ←, more ⋯) are plain text characters, not icons — too small and utilitarian to benefit from an illustrated treatment. Caret/chevron and plus are real icons (`caretdown`, `plus`) — dropdowns and check states need a crisp, scalable stroke, not a text glyph.
+
+Superseded: this system previously tried Phosphor Icons (duotone), Fluent Emoji (Flat), Streamline Freehand (hand-drawn line), Emojione Monotone, Lucide, and hotlinked Phosphor SVGs from Iconify's CDN (unreliable in the sandboxed preview) — settled on self-hosting the real Phosphor "light" path data inline.
